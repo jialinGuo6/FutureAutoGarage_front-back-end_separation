@@ -1,0 +1,87 @@
+# FutureAutoGarage/.gitignore
+# Django + Vite React 项目忽略文件配置
+
+# ================================
+# 前端相关 Frontend Related
+# ================================
+# 忽略旧的Django内嵌前端目录 Ignore old Django embedded frontend
+auto_garage/frontend/
+
+# Node.js 依赖包 Node.js dependencies
+node_modules/
+**/node_modules/
+
+# Vite 构建输出 Vite build output
+frontend-vite/dist/
+
+# ================================
+# Django 后端相关 Django Backend
+# ================================
+# 数据库文件 Database files
+*.sqlite3
+db.sqlite3
+
+# 媒体文件（用户上传） Media files (user uploads)
+media/
+
+# 静态文件收集目录 Static files collection
+staticfiles/
+static_root/
+
+# Python 缓存文件 Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ================================
+# 环境配置 Environment Config
+# ================================
+# 环境变量文件 Environment variables
+.env
+.env.*
+!.env.example
+
+# Python 虚拟环境 Python virtual environment
+venv/
+env/
+.venv/
+
+# ================================
+# 开发工具 Development Tools
+# ================================
+# IDE 配置文件 IDE config files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统文件 System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ================================
+# 项目特定 Project Specific
+# ================================
+# 个人笔记文件 Personal notes
+MyNote.md
+MyNote.txt
+ReadMe.txt
+
+# 废弃代码 Deprecated code
+trash/
+*/trash/
+
+# 日志文件 Log files
+*.log
+logs/
+
+# 临时文件 Temporary files
+*.tmp
+*.temp
+.cache/
