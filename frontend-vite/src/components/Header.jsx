@@ -7,12 +7,12 @@
  * Structure:
  * 
  *   Logo Image                                                             Information Image
- *   ┌────┬────────────────┬────────────────┬───────────────────┐──────────┐────────────┐────┐
- *   |Home|   Services ▾   |     Tires ▾    |     Products ▾    | About Us | Contact Us | FAQ|
- *   └────┴────────────────┴────────────────┴───────────────────┘──────────┘────────────┘────┘
- *        ├ Auto Repairs   ├ AllSeasonTires ├ Product Lights    |
- *        ├ Car Maintenance├ WinterTires    ├ Product Rear View |
- *        └────────────────┴────────────────┴───────────────────┘
+ *   ┌────┬───────────────┬─────────────────┬───────────────────┐──────────┐────────────┐────┐
+ *   |Home|     Tires ▾   |   Services ▾    |     Products ▾    | About Us | Contact Us |FAQ |
+ *   └────┴───────────────┴─────────────────┴───────────────────┘──────────┘────────────┘────┘
+ *        ├ AllSeasonTires├ Auto Repairs    ├ Product Lights    |
+ *        ├ WinterTires   ├ Car Maintenance ├ Product Rear View |
+ *        └───────────────┴─────────────────┴───────────────────┘
  * 
  * 包含Logo图片展示区和主导航菜单，支持下拉菜单功能
  */
@@ -98,19 +98,6 @@ export default function Header() {
                         Home
                     </Button>
                     
-                    {/* Service Drop-down menu  服务下拉菜单 */}
-                    <Button color="inherit" onClick={handleServiceClick}>
-                        Services ▾
-                    </Button>
-                    <Menu anchorEl={serviceAnchorEl} open={serviceOpen} onClose={handleServiceClose}>
-                        <MenuItem onClick={handleServiceClose} component={Link} to="/auto-repairs">
-                            Auto Repairs
-                        </MenuItem>
-                        <MenuItem onClick={handleServiceClose} component={Link} to="/car-maintenance">
-                            Car Maintenance
-                        </MenuItem>
-                    </Menu>
-
                     {/* Tires Drop-down menu 轮胎下拉菜单 */}
                     <Button color="inherit" onClick={handleTireClick}>
                         Tires ▾
@@ -124,6 +111,19 @@ export default function Header() {
                         </MenuItem>
                     </Menu>
                     
+                    {/* Service Drop-down menu  服务下拉菜单 */}
+                    <Button color="inherit" onClick={handleServiceClick}>
+                        Services ▾
+                    </Button>
+                    <Menu anchorEl={serviceAnchorEl} open={serviceOpen} onClose={handleServiceClose}>
+                        <MenuItem onClick={handleServiceClose} component={Link} to="/auto-repairs">
+                            Auto Repairs
+                        </MenuItem>
+                        <MenuItem onClick={handleServiceClose} component={Link} to="/car-maintenance">
+                            Car Maintenance
+                        </MenuItem>
+                    </Menu>
+
                     {/* Products Drop-down menu 其他产品下拉菜单 */}
                     <Button color="inherit" onClick={handleProductClick}>
                         Products ▾
