@@ -14,6 +14,8 @@ export default function Footer() {
         <Box component="footer" className="footer-box" sx={{ mt: 6 }}>
             {/* Link Area */}
             <Typography variant="body2" align="center" sx={{ mb: 0.5, fontSize: '16px', fontWeight: 'bold' }}>
+      
+                <Link href="https://www.linglongtire.com/" target="_blank" sx={{ color: 'inherit', mr: 2, textDecoration: 'none' }}>LingLong Tire</Link>
                 <Link href="https://www.facebook.com/NAPASJ/" target="_blank" sx={{ color: 'inherit', mr: 2, textDecoration: 'none' }}>Facebook</Link>
                 <Link component={RouterLink} to="/contact-location" sx={{ color: 'inherit', mr: 2, textDecoration: 'none' }}>Contacet us</Link>
                 <Link href="https://www.blackcircles.ca/en/garages/ca/new-brunswick/saint-john/196041-future-auto-garage" target="_blank" sx={{ color: 'inherit', textDecoration: 'none' }}>Blackcircles.ca</Link>      

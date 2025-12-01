@@ -79,7 +79,7 @@ export default function TireCategoryPage({ api_interface, selectedTireId, onSele
       {/* Search Box 搜索框*/}
       <Box sx={{
         background: 'linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 30%, #ECEFF1 100%)',
-        borderRadius: '12px', p: 3, mb: 3, boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
+        borderRadius: '12px', p: 0, mb: 0, boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
       }}>
         <TextField
           fullWidth
@@ -87,6 +87,7 @@ export default function TireCategoryPage({ api_interface, selectedTireId, onSele
           placeholder="Search by size, brand, or tread pattern..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
+          size="small"
           sx={{
             '& .MuiOutlinedInput-root': {
               borderRadius: '8px',

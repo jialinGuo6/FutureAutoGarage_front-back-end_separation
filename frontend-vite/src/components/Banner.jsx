@@ -28,7 +28,7 @@ export default function Banner() {
     }, []);
     
     return (
-        <Box sx={{ width: '100%', height: '450px', overflow: 'hidden', borderRadius: '8px', marginTop: '-127px' ,marginBottom: '24px'}}>
+        <Box sx={{ width: '100%', height: '450px', overflow: 'hidden', borderRadius: '8px', marginTop: '-128px' ,marginBottom: '24px'}}>
             <img 
                 src={images[currentIndex]} 
                 alt={`Banner ${currentIndex}`} 

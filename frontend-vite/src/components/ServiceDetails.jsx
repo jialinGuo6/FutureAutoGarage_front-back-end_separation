@@ -15,9 +15,9 @@ import { ListItemButton, ListItemIcon, Divider } from '@mui/material';
 import BuildIcon from '@mui/icons-material/Build'; 
 export default function ServiceDetails({servicesType, serviceContent, selectedService, setSelectedService}) {
   return (
-    <Box sx={{ width: '100%', maxWidth: 1200, mx: 'auto', px: 2, mt: 4, marginTop: '-20px' }}>
+    <Box sx={{ width: '100%', maxWidth: 1200, mx: 'auto', px: 2,  mt: -8 }}>
       <Typography variant="h4" component="h1" sx={{ marginBottom: '24px', textAlign: 'center', color: '#2c3e50', fontWeight: 600 }}>      
-        Car Maintenance
+        {selectedService}
       </Typography>
       
       <Grid container spacing={3} direction="row" wrap="nowrap">
@@ -25,7 +25,7 @@ export default function ServiceDetails({servicesType, serviceContent, selectedSe
           {/* Left Sidebar */}
           <Paper sx={{ p: 2, borderRadius: 2, boxShadow: 3}}>
             <Typography variant="h6" sx={{ mb: 2, color: 'primary.main', fontWeight: 600 }}>
-              Maintenance Services
+              Services List
             </Typography>
             <List sx={{ p: 0 }}>
               {servicesType.map((service, idx) => (

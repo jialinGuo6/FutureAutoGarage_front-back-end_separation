@@ -22,9 +22,17 @@ FutureAutoGarage/
 ├── frontend-vite/              # Vite React Frontend
 │   ├── src/                    # Source Code
 │   ├── public/                 # Static Assets
-│   └── dist/                   # Build Output
-├── start_vite.sh              # Development Startup Script
-├── DEPLOYMENT.md              # Deployment helper file
+│   └── dist/                   # Build Output (Production)
+├── logs/                       # Server Logs
+├── start_dev.sh               # Development Startup Script
+├── stop_dev.sh                # Development Stop Script
+├── deploy_prod.sh             # Production Deployment Script
+├── start_prod.sh              # Production Start Script
+├── stop_prod.sh               # Production Stop Script
+├── update_frontend.sh         # Frontend Update Script
+├── update_backend.sh          # Backend Update Script
+├── rollback_prod.sh           # Production Rollback Script
+
 └── README.md                  # This File
 ```
 
@@ -60,7 +68,7 @@ npm install
 4. **Start Development Servers**
 ```bash
 # Use startup script (recommended)
-./start_vite.sh
+./start_dev.sh
 
 # Or start separately
 cd auto_garage && python manage.py runserver --settings=auto_garage_project.settings.dev &
@@ -105,20 +113,57 @@ npm run build:prod
 npm run preview
 ```
 
-## 📦 Deployment
+## 📦 Production Deployment
 
-### Frontend Deployment
+### Server Requirements
+- **Web Server**: Nginx (recommended)
+- **WSGI Server**: Gunicorn
+- **Database**: SQLite3 (dev) / PostgreSQL (prod)
+- **Process Manager**: systemd or PM2
+
+### Initial Deployment
 ```bash
-cd frontend-vite
-npm run build:prod
-# Deploy dist/ folder to static file server (Nginx, Apache, etc.)
+# 1. Clone repository
+git clone https://github.com/jialinGuo6/FutureAutoGarage_front-back-end_separation.git
+cd FutureAutoGarage
+
+# 2. Setup environment
+cp .env.example .env
+# Edit .env with production values
+
+# 3. Deploy
+./deploy_prod.sh
+
+# 4. Update frontend
+./update_frontend.sh
+
+# 5. Start services
+./start_prod.sh
 ```
 
-### Backend Deployment
+### Update Workflow
 ```bash
-cd auto_garage
-python manage.py collectstatic --settings=auto_garage_project.settings.prod
-python manage.py runserver --settings=auto_garage_project.settings.prod
+# Update frontend only (from local build)
+./update_frontend.sh
+
+# Update backend only
+./update_backend.sh
+
+# Rollback if needed
+./rollback_prod.sh backup_20241129_123456
+```
+
+### Service Management
+```bash
+# Start production services
+./start_prod.sh
+
+# Stop production services
+./stop_prod.sh
+
+# View logs
+tail -f logs/gunicorn_access.log
+tail -f logs/gunicorn_error.log
 ```
 ## Tire Data
 - **winterTire**:
@@ -156,9 +201,16 @@ FutureAutoGarage/
 ├── frontend-vite/              # Vite React 前端
 │   ├── src/                    # 源代码
 │   ├── public/                 # 静态资源
-│   └── dist/                   # 构建输出
-├── start_vite.sh              # 开发启动脚本
-├── DEPLOYMENT.md                 #部署指南 
+│   └── dist/                   # 构建输出（生产环境）
+├── logs/                       # 服务器日志
+├── start_dev.sh               # 开发启动脚本
+├── stop_dev.sh                # 开发停止脚本
+├── deploy_prod.sh             # 生产环境部署脚本
+├── start_prod.sh              # 生产环境启动脚本
+├── stop_prod.sh               # 生产环境停止脚本
+├── update_frontend.sh         # 前端更新脚本
+├── update_backend.sh          # 后端更新脚本
+├── rollback_prod.sh           # 生产环境回滚脚本
 └── README.md                  # 说明文件
 ```
 
@@ -194,7 +246,7 @@ npm install
 4. **启动开发服务器**
 ```bash
 # 使用启动脚本（推荐）
-./start_vite.sh
+./start_dev.sh
 
 # 或分别启动
 cd auto_garage && python manage.py runserver --settings=auto_garage_project.settings.dev &
@@ -239,20 +291,57 @@ npm run build:prod
 npm run preview
 ```
 
-## 📦 部署
+## 📦 生产环境部署
 
-### 前端部署
+### 服务器要求
+- **Web 服务器**: Nginx（推荐）
+- **WSGI 服务器**: Gunicorn
+- **数据库**: SQLite3（开发）/ PostgreSQL（生产）
+- **进程管理**: systemd 或 PM2
+
+### 初始部署
 ```bash
-cd frontend-vite
-npm run build:prod
-# 将 dist/ 文件夹部署到静态文件服务器 (Nginx, Apache 等)
+# 1. 克隆仓库
+git clone https://github.com/jialinGuo6/FutureAutoGarage_front-back-end_separation.git
+cd FutureAutoGarage
+
+# 2. 配置环境
+cp .env.example .env
+# 编辑 .env 文件配置生产环境变量
+
+# 3. 执行部署
+./deploy_prod.sh
+
+# 4. 更新前端
+./update_frontend.sh
+
+# 5. 启动服务
+./start_prod.sh
 ```
 
-### 后端部署
+### 更新流程
 ```bash
-cd auto_garage
-python manage.py collectstatic --settings=auto_garage_project.settings.prod
-python manage.py runserver --settings=auto_garage_project.settings.prod
+# 只更新前端（从本地构建）
+./update_frontend.sh
+
+# 只更新后端
+./update_backend.sh
+
+# 如需回滚
+./rollback_prod.sh backup_20241129_123456
+```
+
+### 服务管理
+```bash
+# 启动生产服务
+./start_prod.sh
+
+# 停止生产服务
+./stop_prod.sh
+
+# 查看日志
+tail -f logs/gunicorn_access.log
+tail -f logs/gunicorn_error.log
 ```
 
 ## 📞 联系方式

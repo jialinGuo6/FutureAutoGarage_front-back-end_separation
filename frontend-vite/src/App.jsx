@@ -46,6 +46,7 @@ import ContactLocation from "./pages/ContactLocation";
 import Products from "./pages/ProductLights";
 import ProductRearView from "./pages/ProductRearView";
 import FAQ from "./pages/FAQ";
+import TirePatterns from "./pages/TirePatterns";
 /* Main layout structure 
   - Header Component
   - Main content area (HomePage)
@@ -68,6 +69,7 @@ export default function App() {
                     {/* Application routing configuration */}
                     <Route path="/"  element={<HomePage />} />
                     <Route path="/all-season-tires" element={<AllSeasonTires />} />
+                    <Route path="/tread-patterns" element={<TirePatterns />} />
                     <Route path="/winter-tires" element={<WinterTires />} />
                     <Route path="/auto-repairs" element={<AutoRepairs />} />
                     <Route path="/car-maintenance" element={<CarMaintenance />} />

@@ -15,12 +15,15 @@ export default function AboutUs() {
     const navigate = useNavigate();
     return (
         <Container maxWidth="md">
-            <Box sx={{ marginTop: '-20px' }}>
-                <Typography variant="h4" component="h1" sx={{ marginBottom: '24px', textAlign: 'center', color: '#2c3e50', fontWeight: 600 }}>
+            <Box sx={{  mt: -8}}>
+                <Typography  sx={{ mb: 2, fontSize: '1.80rem', textAlign: 'center', color: '#2c3e50', fontWeight: 600 }}>
                     About Us
                 </Typography>
                 <Typography variant="body1" align="center" sx={{ mb: 2, fontStyle: 'italic', color: 'text.secondary' }}>
                     Future Auto Garage is a locally trusted auto repair and service center located in Saint John, New Brunswick, Canada.
+                </Typography>
+                <Typography variant="body1" align="center" sx={{ mb: 2, color: 'text.secondary' }}>
+                    We are Linglong Tire's authorized Dealer in Canada.
                 </Typography>
                 <Typography variant="body1" align="center" sx={{ mb: 2, color: 'text.secondary' }}>
                     We specialize in a wide range of automotive services, including tire installation, oil changes, brake inspections, and other routine maintenance. Additionally, we offer expert upgrades for vehicle lighting and backup camera systems, featuring tire brands such as Linglong.

@@ -24,16 +24,9 @@ export default function WinterTires() {
   const [selectedTireId, setSelectedTireId] = useState(null);
 
   return (
-    <Box sx={{ marginTop: '-20px'}}>
-      <Typography variant="h4" sx={{ mb: 4, textAlign: 'center', color: '#2c3e50', fontWeight: 600 }}>
-        Winter Tires
-      </Typography>
-      <Typography
-        variant="body1"
-        sx={{ mb: 3, textAlign: 'center', color: '#34495e', fontSize: '1.1rem' }}
-      >
-        Winter Tires are designed for low temperatures and icy roads, 
-        offering exceptional traction and braking performance to ensure safe driving in winter conditions.
+    <Box sx={{  mt: -8 }}>
+      <Typography  sx={{ mb: 2, fontSize: '1.80rem', textAlign: 'center', color: '#2c3e50', fontWeight: 600 }}>
+        Ling Long Winter Tires
       </Typography>
 
       {/* Image Show Component */}
@@ -41,16 +34,8 @@ export default function WinterTires() {
         tireId={selectedTireId}   
         defaultImages={['/media/winter_tire0.png', '/media/winter_tire1.png']}
       />
-      <Typography
-        variant="body2"
-        sx={{
-          textAlign: 'center',
-          color: 'text.secondary',
-          mb: 3,
-          mt: 1,
-        }}
-      >
-        Explore our winter tires. Click a model below to see details and photos.
+      <Typography variant="body2"sx={{textAlign: 'center',color: 'text.secondary',mb: 0,mt: 0,}}>
+        Browse our winter tires below. Click a tire to view its details and images.
       </Typography>
 
       {/* The Tire Table Component */}

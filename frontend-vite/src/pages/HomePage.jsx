@@ -13,11 +13,11 @@ export default function HomePage() {
                 <Banner />
                 <Grid container spacing={100} direction="column" alignItems="center" sx={{ mt: 2 }}>
                     <Grid>
-                        <Typography variant="h4" component="h1" sx={{ marginBottom: '24px', textAlign: 'center', color: '#2c3e50', fontWeight: 600 }}>
+                        <Typography variant="h4" component="h1" sx={{ mt: 2, mb: 1, textAlign: 'center', color: '#2c3e50', fontWeight: 600 }}>
                              Future Service
                         </Typography>
 
-                        <Typography component='h4' variant='h5' sx={{ textAlign: 'center', mt: 2}}>
+                        <Typography component='h4' sx={{ textAlign: 'center', mt: 0, fontSize: '1.40rem'}}>
                             Professional, Accurate, Effective, Honest, and All for Customers.
                         </Typography>
                     </Grid>

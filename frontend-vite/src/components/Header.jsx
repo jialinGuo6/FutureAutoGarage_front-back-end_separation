@@ -12,7 +12,8 @@
  *   └────┴───────────────┴─────────────────┴───────────────────┘──────────┘────────────┘────┘
  *        ├ AllSeasonTires├ Auto Repairs    ├ Product Lights    |
  *        ├ WinterTires   ├ Car Maintenance ├ Product Rear View |
- *        └───────────────┴─────────────────┴───────────────────┘
+ *        ├ Tread Patterns├─────────────────┘───────────────────┘            
+ *        └───────────────┘
  * 
  * 包含Logo图片展示区和主导航菜单，支持下拉菜单功能
  */
@@ -65,23 +66,27 @@ export default function Header() {
             display: 'flex', 
             justifyContent: 'space-between', 
             alignItems: 'center', 
-            padding: '10px 24px',
+            padding: '1px 24px', 
             backgroundColor: 'transparent',
             borderBottom: '1px solid #E0E0E0'
         }}>
             {/* Left Logo Images */}
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                <img 
-                    src="/images/logo_s.png" 
-                    alt="Logo" 
-                    style={{ height: '40px' }}
-                />
-                <img 
-                    src="/images/FUTURE_GARAGE.png" 
-                    alt="FUTURE_GARAGE" 
-                    style={{ height: '20px' }}
-                />
-            </Box>
+            <Link to="/" style={{ textDecoration: 'none' }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                
+                        <img 
+                            src="/images/logo_s.png" 
+                            alt="Logo" 
+                            style={{ height: '40px' }}
+                        />
+                        <img 
+                            src="/images/FUTURE_GARAGE.png" 
+                            alt="FUTURE_GARAGE" 
+                            style={{ height: '20px' }}
+                        />
+                
+                </Box>
+            </Link>
             {/* Right Contact Information */}
             <img 
                 src="/images/contact_info.png" 
@@ -108,6 +113,9 @@ export default function Header() {
                         </MenuItem>
                         <MenuItem onClick={handleTireClose} component={Link} to="/winter-tires">
                             Winter Tires
+                        </MenuItem>
+                        <MenuItem onClick={handleTireClose} component={Link} to="/tread-patterns">
+                            Tread Patterns
                         </MenuItem>
                     </Menu>
                     

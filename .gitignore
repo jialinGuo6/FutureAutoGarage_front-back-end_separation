@@ -72,6 +72,7 @@ Thumbs.db
 MyNote.md
 MyNote.txt
 ReadMe.txt
+README_MIGRATION.md
 
 # 废弃代码 Deprecated code
 trash/
@@ -79,9 +80,21 @@ trash/
 
 # 日志文件 Log files
 *.log
-logs/
 
 # 临时文件 Temporary files
 *.tmp
 *.temp
 .cache/
+
+# 进程 ID 文件 Process ID files
+*.pid
+gunicorn.pid
+
+# Nginx 配置文件 Nginx config
+nginx_*.conf
+
+# 备份目录 Backup directories
+backup_*/
+current_backup_*/
+dist_backup_*/
+backend_backup_*/

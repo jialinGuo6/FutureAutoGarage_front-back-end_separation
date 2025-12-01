@@ -39,8 +39,8 @@ export default function ProductLights() {
     ];
 
     return (
-        <Box sx={{ marginTop: '-20px'}}>
-            <Typography variant="h4" component="h1" sx={{ marginBottom: '24px', textAlign: 'center', color: '#2c3e50', fontWeight: 600 }}>
+        <Box sx={{  mt: -8}}>
+            <Typography  sx={{ mb: 2, fontSize: '1.80rem', textAlign: 'center', color: '#2c3e50', fontWeight: 600 }}>
                  Led Car Headlights
             </Typography>
             

@@ -17,24 +17,16 @@ export default function AllSeasonTires() {
   const [selectedTireId, setSelectedTireId] = useState(null); // 当前选中的轮胎 ID
 
   return (
-    <Box sx={{ marginTop: '-20px' }}>
-      <Typography variant="h4" sx={{ mb: 4, textAlign: 'center', color: '#2c3e50', fontWeight: 600 }}>
-        All-Season Tires
+    <Box sx={{  mt: -8 }}>
+      <Typography  sx={{ mb: 2, fontSize: '1.80rem', textAlign: 'center', color: '#2c3e50', fontWeight: 600 }}>
+        Ling Long All-Season Tires
       </Typography>
       <CarShowPics 
         tireId={selectedTireId}   
         defaultImages={['/media/all_season_tire0.png']}
       />
 
-      <Typography
-        variant="body2"
-        sx={{
-          textAlign: 'center',
-          color: 'text.secondary',
-          mb: 3,
-          mt: 1,
-        }}
-      >
+      <Typography variant="body2" sx={{textAlign: 'center', color: 'text.secondary', mb: 0, mt: 0,}} >
         Browse our all-season tires below. Click a tire to view its details and images.
       </Typography>
 

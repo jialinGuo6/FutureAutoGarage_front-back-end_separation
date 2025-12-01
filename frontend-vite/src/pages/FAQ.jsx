@@ -19,7 +19,7 @@ export default function FAQ() {
   return (
     <Container maxWidth="md" sx={{ py: 6 }}>
       {/* Title */}
-      <Typography variant="h4" component="h1" sx={{ marginBottom: '24px', textAlign: 'center', color: '#2c3e50', fontWeight: 600 }}>     
+      <Typography component="h1" sx={{  mt: -14, fontSize: '1.80rem', textAlign: 'center', color: '#2c3e50', fontWeight: 600 }}>       
         Frequently Asked Questions
       </Typography>
 
