@@ -11,8 +11,8 @@ auto_garage/frontend/
 node_modules/
 **/node_modules/
 
-# Vite 构建输出 Vite build output
-frontend-vite/dist/
+# Vite 构建输出 Vite build output (生产环境需要上传 dist/)
+# frontend-vite/dist/  # 注释掉，允许上传 dist 文件
 
 # ================================
 # Django 后端相关 Django Backend
