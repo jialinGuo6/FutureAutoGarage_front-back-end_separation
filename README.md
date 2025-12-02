@@ -121,23 +121,38 @@ npm run preview
 - **Database**: SQLite3 (dev) / PostgreSQL (prod)
 - **Process Manager**: systemd or PM2
 
-### Initial Deployment
+### Initial Deployment (Aliyun Server)
 ```bash
-# 1. Clone repository
-git clone https://github.com/jialinGuo6/FutureAutoGarage_front-back-end_separation.git
+# 1. Create project directory
+cd /home
+mkdir FutureAutoGarage
 cd FutureAutoGarage
 
-# 2. Setup environment
-cp .env.example .env
-# Edit .env with production values
+# 2. Install dependencies
+# Install Python, Node.js, Nginx, etc.
+sudo apt update
+sudo apt install python3 python3-pip python3-venv nodejs npm nginx
 
-# 3. Deploy
-./deploy_prod.sh
+# 3. Create virtual environment
+python3 -m venv venv
+source venv/bin/activate
 
-# 4. Update frontend
+# 4. Create and configure environment file
+# Copy .env content from your local project
+vim .env
+
+# 5. Create update script
+# Copy update_frontend.sh content from https://github.com/jialinGuo6/FutureAutoGarage_front-back-end_separation.git
+vim update_frontend.sh
+chmod +x update_frontend.sh
+
+# 6. Get project code
 ./update_frontend.sh
 
-# 5. Start services
+# 7. Deploy
+./deploy_prod.sh
+
+# 8. Start services
 ./start_prod.sh
 ```
 
@@ -299,23 +314,38 @@ npm run preview
 - **数据库**: SQLite3（开发）/ PostgreSQL（生产）
 - **进程管理**: systemd 或 PM2
 
-### 初始部署
+### 初始部署（阿里云服务器）
 ```bash
-# 1. 克隆仓库
-git clone https://github.com/jialinGuo6/FutureAutoGarage_front-back-end_separation.git
+# 1. 创建项目目录
+cd /home
+mkdir FutureAutoGarage
 cd FutureAutoGarage
 
-# 2. 配置环境
-cp .env.example .env
-# 编辑 .env 文件配置生产环境变量
+# 2. 安装依赖工具
+# 安装 Python、Node.js、Nginx 等
+sudo apt update
+sudo apt install python3 python3-pip python3-venv nodejs npm nginx
 
-# 3. 执行部署
-./deploy_prod.sh
+# 3. 创建虚拟环境
+python3 -m venv venv
+source venv/bin/activate
 
-# 4. 更新前端
+# 4. 创建并配置环境文件
+# 从本地项目复制 .env 内容
+vim .env
+
+# 5. 创建更新脚本
+# 从git线上项目复制 update_frontend.sh 内容
+vim update_frontend.sh
+chmod +x update_frontend.sh
+
+# 6. 获取项目代码
 ./update_frontend.sh
 
-# 5. 启动服务
+# 7. 执行部署
+./deploy_prod.sh
+
+# 8. 启动服务
 ./start_prod.sh
 ```
 
