@@ -21,8 +21,6 @@ export default defineConfig({
       }
     }
   },
-  define: {
-    'process.env.REACT_APP_API_URL': JSON.stringify('http://localhost:8000')
-  },
+
   envPrefix: 'REACT_APP_'
 })

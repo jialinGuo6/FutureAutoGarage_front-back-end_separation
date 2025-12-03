@@ -128,10 +128,10 @@ cd /home
 mkdir FutureAutoGarage
 cd FutureAutoGarage
 
-# 2. Install dependencies
-# Install Python, Node.js, Nginx, etc.
+# 2. Install dependencies，if do not have
+# Install Python, (Node.js, Nginx) if not used /dist for frontend drectly, etc.
 sudo apt update
-sudo apt install python3 python3-pip python3-venv nodejs npm nginx
+sudo apt install python3 python3-pip python3-venv nginx
 
 # 3. Create virtual environment
 python3 -m venv venv
@@ -321,10 +321,10 @@ cd /home
 mkdir FutureAutoGarage
 cd FutureAutoGarage
 
-# 2. 安装依赖工具
-# 安装 Python、Node.js、Nginx 等
+# 2. 安装依赖工具, 如果没有的话
+# 安装 Python、(Node.js、Nginx)如果不是直接上传/dist目录而是React代码 等, 
 sudo apt update
-sudo apt install python3 python3-pip python3-venv nodejs npm nginx
+sudo apt install python3 python3-pip python3-venv nginx
 
 # 3. 创建虚拟环境
 python3 -m venv venv

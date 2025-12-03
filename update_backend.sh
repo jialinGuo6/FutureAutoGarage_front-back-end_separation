@@ -3,7 +3,7 @@
 echo "🔄 更新后端代码..."
 
 # 项目根目录
-PROJECT_DIR="/var/www/FutureAutoGarage"
+PROJECT_DIR="/home/FutureAutoGarage"
 cd $PROJECT_DIR || { echo "❌ 项目目录不存在"; exit 1; }
 
 # 备份当前后端

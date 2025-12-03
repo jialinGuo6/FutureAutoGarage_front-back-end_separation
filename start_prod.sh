@@ -55,9 +55,9 @@ cd ..
 
 echo ""
 echo "🎉 服务启动完成!"
-echo "   - 前端: http://your-domain.com"
-echo "   - API: http://your-domain.com/api/"
-echo "   - 管理后台: http://your-domain.com/admin/"
+echo "   - 前端: https://futuregarage.net"
+echo "   - API: https://futuregarage.net/api/"
+echo "   - 管理后台: https://futuregarage.net/admin/"
 echo ""
 echo "📄 日志文件:"
 echo "   - 访问日志: logs/gunicorn_access.log"

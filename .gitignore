@@ -37,10 +37,12 @@ __pycache__/
 # ================================
 # 环境配置 Environment Config
 # ================================
-# 环境变量文件 Environment variables
+# Django 后端环境变量文件 Django environment variables
 .env
-.env.*
 !.env.example
+
+# 前端环境变量文件可以上传 Frontend env files can be uploaded
+# frontend-vite/.env*  # 不忽略前端环境文件
 
 # Python 虚拟环境 Python virtual environment
 venv/

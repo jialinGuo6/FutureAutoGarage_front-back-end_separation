@@ -3,7 +3,7 @@
 echo "🚀 首次部署生产环境..."
 
 # 项目根目录
-PROJECT_DIR="/var/www/FutureAutoGarage"
+PROJECT_DIR="/home/FutureAutoGarage"
 
 # 检查是否在虚拟环境中
 if [[ "$VIRTUAL_ENV" == "" ]]; then
@@ -48,7 +48,7 @@ echo "📄 生成 Nginx 配置文件..."
 cat > nginx_futureautogarage.conf << EOF
 server {
     listen 80;
-    server_name localhost;  # 替换为你的域名
+    server_name futuregarage.net www.futuregarage.net;
 
     # 前端静态文件
     location / {

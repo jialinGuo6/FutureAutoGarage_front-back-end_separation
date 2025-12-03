@@ -3,11 +3,11 @@
 echo "🔄 更新前端生产版本..."
 
 # 项目根目录
-PROJECT_DIR="/var/www/FutureAutoGarage"
+PROJECT_DIR="/home/FutureAutoGarage"
 cd $PROJECT_DIR || { echo "❌ 项目目录不存在"; exit 1; }
 
 # 初始化 git（第一次运行才需要）
-if [ ! -d "frontend_repo/.git" ]; then
+if [ ! -d "frontend_repo/.git" ]; then 
     echo "⚡ 初始化前端仓库..."
     mkdir -p frontend_repo
     cd frontend_repo
